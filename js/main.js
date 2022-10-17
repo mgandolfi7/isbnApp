@@ -4,7 +4,7 @@ document.querySelector("#title").innerText = localStorage.getItem("Books")
 
 
 
-// 9780140328721  
+// 9780140328721 9781408855652
 
 function getFetch(){
   const isbn = document.querySelector("input").value
@@ -22,6 +22,7 @@ function getFetch(){
           let books = localStorage.getItem("Books") + "; " + data.title
           localStorage.setItem("Books", books)
         }
+        
         document.querySelector("#title").innerText = localStorage.getItem("Books")       
       })
       .catch(err => {
